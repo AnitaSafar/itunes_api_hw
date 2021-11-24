@@ -1,9 +1,12 @@
 import React from 'react';
+import Song from '../components/Song';
 
 const SongList = () => {
 
     return(
-        <h2>Song list</h2>
+        <ul>
+        <Song/>
+        </ul>
     )
 };
 
