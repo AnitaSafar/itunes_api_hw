@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Song = () => {
+const Song = ({song, id}) => {
+    console.log(id)
     return(
-        <>
-        <p>This is a song</p>
-        <p>This is a song</p>
-        </>
+        <p><b>#{id}</b> {song.title.label}</p>
     )
 };
 

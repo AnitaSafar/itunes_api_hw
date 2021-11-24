@@ -13,14 +13,14 @@ function App() {
   const getSongs = function(){
     fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
     .then(response => response.json())
-    .then(songs => setSongs(songs))
-    console.log(songs)
+    .then(songs => setSongs(songs.feed.entry))
+    
   }
 
   return (
     <>
-    <h1>Current Top 20 songs - UK </h1>
-    <SongList/>
+    <h2>Current Top 20 songs - UK </h2>
+    <SongList songs={songs}/>
     </>
   );
 }
